@@ -4,23 +4,23 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://standards.iso.org/iso/19770/-2/2015/schema.xsd http://standards.iso.org/iso/19770/-2/2015-current/schema.xsd"
   xml:lang="en-US"
-  tagId="org.fedoraproject.Fedora-44"
+  tagId="org.evernightvistalinux.EvernightVista-45"
   tagVersion="1"
-  name="Fedora"
-  version="44"
+  name="Evernight Vista"
+  version="45"
   versionScheme="unknown"
   media="(OS:linux)">
   <Entity
-    name="Fedora Project"
+    name="Evernight Vista Team"
     regid="fedoraproject.org"
     role="tagCreator softwareCreator aggregator distributor licensor" />
   <Link
     rel="license"
     href="https://fedoraproject.org/wiki/Legal:Licenses/LicenseAgreement" />
   <Meta
-    product="Fedora"
-    colloquialVersion="44"
-    summary="Linux distribution developed by the community-supported Fedora Project and sponsored by Red Hat, Inc."
+    product="Evernight Vista"
+    colloquialVersion="45"
+    summary="Linux distribution based on Fedora"
     entitlementDataRequired="false"
     unspscCode="43233004"
     unspscVersion="20.0601" />

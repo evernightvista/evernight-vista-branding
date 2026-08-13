@@ -1,12 +1,12 @@
 # dist macros.
 
 %__bootstrap         ~bootstrap
-%fedora              44
-%fc44                1
-%distcore            .fc%{fedora}
+%fedora              45
+%fc45                1
+%distcore            .eos%{fedora}
 %dist                %{!?distprefix0:%{?distprefix}}%{expand:%{lua:for i=0,9999 do print("%{?distprefix" .. i .."}") end}}%{distcore}%{?with_bootstrap:%{__bootstrap}}
-%dist_vendor         Fedora
-%dist_name           Fedora Linux
-%dist_home_url       https://fedoraproject.org/
-%dist_bug_report_url https://bugzilla.redhat.com/
+%dist_vendor         Evernight Vista Team
+%dist_name           Evernight Vista Linux
+%dist_home_url       https://github.com/evernightvista/
+%dist_bug_report_url https://github.com/evernight-vista-team/evernight-vista/issues
 %dist_debuginfod_url ima:enforcing https://debuginfod.fedoraproject.org/ ima:ignore

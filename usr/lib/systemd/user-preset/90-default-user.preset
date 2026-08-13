@@ -40,3 +40,6 @@ enable mpris-proxy.service
 # Ensure xdg-user-dirs are created properly
 # https://bugzilla.redhat.com/show_bug.cgi?id=2319081
 enable xdg-user-dirs.service
+
+# Enable deepin-liferaft daemon
+enable deepin-liferaft.service
