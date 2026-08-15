@@ -6,7 +6,7 @@
 %distcore            .eos%{fedora}
 %dist                %{!?distprefix0:%{?distprefix}}%{expand:%{lua:for i=0,9999 do print("%{?distprefix" .. i .."}") end}}%{distcore}%{?with_bootstrap:%{__bootstrap}}
 %dist_vendor         Evernight Vista Team
-%dist_name           Evernight Vista Linux
+%dist_name           Evernight Vista Operating System
 %dist_home_url       https://github.com/evernightvista/
-%dist_bug_report_url https://github.com/evernight-vista-team/evernight-vista/issues
+%dist_bug_report_url https://github.com/evernightvista/evernight-vista/issues
 %dist_debuginfod_url ima:enforcing https://debuginfod.fedoraproject.org/ ima:ignore
