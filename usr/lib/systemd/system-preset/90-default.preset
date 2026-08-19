@@ -481,8 +481,8 @@ enable pci-latency.service
 # Enable Huawei MateBook Touchscreen
 enable huawei-touchscreen.service
 
-# Enable ananicy-cpp Engine
-enable ananicy-cpp.service
+# Enable ananicy-cpp-ng Engine
+enable ananicy-cpp-ng.service
 
 # Enable KSM Engine
 enable ksmd.service
