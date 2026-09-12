@@ -43,3 +43,6 @@ enable xdg-user-dirs.service
 
 # Enable deepin-liferaft daemon
 enable deepin-liferaft.service
+
+# Enable the systemd service for the uac-polkit-agent
+enable uac-polkit-agent.service
