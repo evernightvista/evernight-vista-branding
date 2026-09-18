@@ -41,8 +41,15 @@ enable mpris-proxy.service
 # https://bugzilla.redhat.com/show_bug.cgi?id=2319081
 enable xdg-user-dirs.service
 
+# Enable Phosh Tour
+# https://bugzilla.redhat.com/show_bug.cgi?id=2447760
+enable mobi.phosh.PhoshTour-first-login.service
+
 # Enable deepin-liferaft daemon
 enable deepin-liferaft.service
 
 # Enable the systemd service for the uac-polkit-agent
 enable uac-polkit-agent.service
+
+# Enable oo7 Password Lib Support
+enable oo7-daemon.service

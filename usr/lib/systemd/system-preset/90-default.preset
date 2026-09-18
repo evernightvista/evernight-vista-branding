@@ -12,8 +12,8 @@ disable systemd-boot-update.service
 enable systemd-resolved.service
 
 # https://fedoraproject.org/wiki/Changes/EnableSystemdOomd
-disable systemd-oomd.service
-enable earlyoom.service
+enable systemd-oomd.socket
+enable systemd-oomd.service
 
 # These presets were last validated en-masse on 2015-09-09
 # https://fedorahosted.org/fesco/ticket/1472
@@ -23,6 +23,12 @@ enable earlyoom.service
 enable dbus.socket
 enable dbus-broker.service
 enable sshd.service
+
+# Enable kmsconvt@.service as implementation for autovt@.service.
+# Explicitly disable getty@.service which is enabled by systemd.
+# https://bugzilla.redhat.com/show_bug.cgi?id=2429626
+enable kmsconvt@.service
+disable getty@.service
 
 # Locally-running services
 enable atd.*
@@ -256,6 +262,9 @@ enable upower.service
 enable udisks2.service
 enable polkit.service
 
+# OOBE
+enable plasma-setup.service
+
 # https://bugzilla.redhat.com/show_bug.cgi?id=1187072
 enable timedatex.service
 
@@ -455,7 +464,7 @@ enable nfs-client.target
 # https://bugzilla.redhat.com/show_bug.cgi?id=2233948
 enable cloud-config.service
 enable cloud-final.service
-enable cloud-init.service
+enable cloud-init-main.service
 enable cloud-init-local.service
 
 # Enable  kernel-bootcfg-boot-successful.service
@@ -464,8 +473,8 @@ enable kernel-bootcfg-boot-successful.service
 
 # Enable lvm-devices-import
 # https://bugzilla.redhat.com/show_bug.cgi?id=2301651
-enable /usr/lib/systemd/system/lvm-devices-import.path
-enable /usr/lib/systemd/system/lvm-devices-import.service
+enable lvm-devices-import.path
+enable lvm-devices-import.service
 
 # Enable fips-crypto-policy-overlay
 # https://bugzilla.redhat.com/show_bug.cgi?id=2325499
@@ -475,18 +484,19 @@ enable fips-crypto-policy-overlay.service
 # https://bugzilla.redhat.com/show_bug.cgi?id=2358608
 enable gpio-manager.service
 
+# Enable authselect-apply-changes.service
+# https://bugzilla.redhat.com/show_bug.cgi?id=2397255
+enable authselect-apply-changes.service
+
+# Enable Intel Low Power Model Daemon
+# https://bugzilla.redhat.com/show_bug.cgi?id=2442391
+enable intel_lpmd.service
+
 # Enable pci-latency.service
 enable pci-latency.service
-
-# Enable Huawei MateBook Touchscreen
-enable huawei-touchscreen.service
 
 # Enable ananicy-cpp-ng Engine
 enable ananicy-cpp-ng.service
 
 # Enable KSM Engine
 enable ksmd.service
-
-# Enable KMSCON Service
-enable kmsconvt@tty1.service
-disable getty@tty1.service
