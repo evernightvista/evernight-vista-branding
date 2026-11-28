@@ -189,6 +189,7 @@ enable rpm-ostree-countme.timer
 # https://bugzilla.redhat.com/show_bug.cgi?id=1279322
 enable vmtoolsd.service
 enable vgauthd.service
+enable run-vmblock\x2dfuse.mount
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=976315
 enable dkms.service
